@@ -1,0 +1,35 @@
+.menu {
+    background-color: #212529;
+    color: #fff;
+    list-style: none;
+    height: 100vh;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.menu-item {
+    text-decoration: none;
+    font-style: none;
+    color: #fff;
+    display: block;
+    padding: 10px 20px;
+}
+
+.menu-item:hover {
+    font-style: none;
+    text-decoration: none;
+    color: cornflowerblue;
+    font-size: 20px;
+}
+
+/* No celular o menu lateral desaparece */
+@media(max-width: 768px) {
+    .menu {
+        display: none;/* desativar*/
+    }
+}
+
+.card {
+    margin: 5px;
+    box-shadow: 1px 1px 6px #848485bb;
+    padding: 5px;
+}
