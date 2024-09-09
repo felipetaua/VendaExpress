@@ -33,3 +33,21 @@
     box-shadow: 1px 1px 6px #848485bb;
     padding: 5px;
 }
+
+.btn-form {
+    margin-top: 10px;
+}
+
+.painel {
+    max-width: 350px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 2px 2px 10px #242d36;
+    padding: 40px;
+    border-radius: 12px;
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
