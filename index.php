@@ -15,16 +15,16 @@
 <body>
     
     <div class="painel">
-        <form>
+        <form action="acesso.php" method="post">
             <h3>LOGIN</h3>
             <h5> Seja bem vindo ao sitema! Insira suas informações.</h5>
             <div class="form-group">
               <label class="painel-label-texto"><i class="fa-solid fa-user"> </i> CPF </label>
-              <input type="text" class="form-control" placeholder="000.000.000-00">
+              <input name="cpf" type="text" class="form-control" placeholder="000.000.000-00">
             </div>
             <div class="form-group">
               <label class="painel-label-texto"><i class="fa-solid fa-lock"> </i> Senha </label>
-              <input type="password" class="form-control" placeholder="Senha">
+              <input name="senha" type="password" class="form-control" placeholder="Senha">
             </div>
             <button type="submit" class="btn btn-primary btn-form">Login</button>
             <a class="btn bg-dark " href="./principal.php"></a>
