@@ -9,3 +9,4 @@ INSERT INTO usuario(nome,cpf,senha) VALUES
 ('Tauã Felipe', '112.123.121-12','123'),
 ('Livia Bruno','132.232.124-23','053'),
 ('Lasanha Junior','804.342.345-29','228');
+        
