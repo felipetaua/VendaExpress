@@ -1,3 +1,9 @@
+<?php 
+  session_start();
+  include "validacao.php";
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,14 +40,18 @@
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              
+              <a class="btn btn-outline-danger ms-3" href="./sair.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+
             </form>
           </div>
         </div>
       </nav>
       <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 menu"> 
+            <div class="col-md-3 menu">
+              <h6>Bem-vindo(a) <?php echo $_SESSION['usuario'];?></h6>
                 <ul class="menu">
                     <li><a href="./principal.php" class="menu-item"><i class="fa-solid fa-web-awesome"></i> Usuário </a></li>
                     <li><a href="./cidade.php" class="menu-item"><i class="fa-solid fa-building"></i> Cidade </a></li>
@@ -49,9 +59,6 @@
                     <li><a href="./funcionario.php" class="menu-item"><i class="fa-solid fa-user-tie"></i> Funcionário </a></li>
                     <li><a href="./produto.php" class="menu-item"><i class="fa-solid fa-box"></i> Produto </a></li>
                     <li><a href="./venda.php" class="menu-item"><i class="fa-solid fa-cart-shopping"></i> Produto </a></li>
-                    <div>
-                      <li><a href="./index.php" class="menu-item"><i class="fa-solid fa-door-open"></i> Sair </a></li>
-                    </div>
                 </ul>
             </div>
             <div class="col-md-9">

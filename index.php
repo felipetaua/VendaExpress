@@ -27,7 +27,7 @@
               <input name="senha" type="password" class="form-control" placeholder="Senha">
             </div>
             <button type="submit" class="btn btn-primary btn-form">Login</button>
-            <a class="btn bg-dark " href="./principal.php"></a>
+            <button type="reset" class="btn btn-danger btn-form">Limpar</button>
         </form>
     </div>
 
