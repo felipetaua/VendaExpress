@@ -1,5 +1,4 @@
 <?php 
-  session_start();
   include "validacao.php";
 ?>
 <!DOCTYPE html>
@@ -51,7 +50,7 @@
       <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 menu">
-              <h6>Bem-vindo(a) <?php echo $_SESSION['usuario'];?></h6>
+              <h6>Bem-vindo(a) <?php echo $_SESSION['usuario'] ?></h6>
                 <ul class="menu">
                     <li><a href="./principal.php" class="menu-item"><i class="fa-solid fa-web-awesome"></i> Usuário </a></li>
                     <li><a href="./cidade.php" class="menu-item"><i class="fa-solid fa-building"></i> Cidade </a></li>
@@ -64,18 +63,22 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md card">
-                        <form>
-                            <h3>Cadastro</h3>
+                    <h3>Cadastro</h3>
+                          <form action="./usuario/inserir.php" method="post">  
                             <div class="form-group">
-                              <label>Endereço de email</label>
-                              <input type="email" class="form-control" placeholder="Seu email">
+                              <label> Nome </label>
+                              <input name="nome" type="text" class="form-control" placeholder="Seu nome">
                             </div>
                             <div class="form-group">
-                              <label>Senha</label>
-                              <input type="password" class="form-control" placeholder="Senha">
+                              <label> CPF </label>
+                              <input name="cpf" type="text" class="form-control cpf" placeholder="seu cpf">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-form">Salvar</button>
-                            <button type="reset" class="btn btn-danger btn-form">Limpar</button>
+                            <div class="form-group">
+                              <label> Senha </label>
+                              <input name="senha" type="password" class="form-control" placeholder="Senha">
+                            </div>
+                            <button type="submit" class="btn btn-success btn-form">Cadastrar</button>
+                            <button type="reset" class="btn btn-outline-danger btn-form">Limpar</button>
                           </form>
                     </div>
                     <div class="col-md card">
@@ -120,6 +123,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <!-- Tabela -->
       <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+      <!-- J QuaryMask -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
       <!-- JavaScript -->
       <script src="./recursos/script.js"></script>

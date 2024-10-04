@@ -19,8 +19,8 @@
             <h3>LOGIN</h3>
             <h5> Seja bem vindo ao sitema! Insira suas informações.</h5>
             <div class="form-group">
-              <label class="painel-label-texto"><i class="fa-solid fa-user"> </i> CPF </label>
-              <input name="cpf" type="text" class="form-control" placeholder="000.000.000-00">
+              <label class="painel-label-texto "><i class="fa-solid fa-user"> </i> CPF </label>
+              <input name="cpf" type="text" class="form-control cpf" placeholder="000.000.000-00">
             </div>
             <div class="form-group">
               <label class="painel-label-texto"><i class="fa-solid fa-lock"> </i> Senha </label>
@@ -35,6 +35,12 @@
     <div id="particles-js"></div> <!-- stats - count particles -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Tabela -->
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+    <!-- J QueryMask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="./recursos/script.js"></script>
     <script src="./recursos/particle.js"></script>
