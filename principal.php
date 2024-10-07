@@ -1,5 +1,6 @@
 <?php 
   include "validacao.php";
+  include "conexao.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,6 +14,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Fontawasome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Logo do site -->
+    <link rel="shortcut icon" type="imagex/png" href="./assets/truck-fast-solid.ico">
     <title>Sitema Venda+</title>
     <!-- logo: <i class="fa-solid fa-store"></i><i class="fa-solid fa-plus"></i> -->
 </head>
@@ -85,32 +88,38 @@
                         <h3>Listagem</h3>
                         <table class="table" id="tabela">
                             <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                              <!-- Colunas -->
+                              <tr>  
+                                <th scope="col">ID</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">CPF</th>
+                                <th scope="col">Opções</th>
                               </tr>
                             </thead>
+                            <!-- Informações da tabela -->
                             <tbody>
+
+                              <?php
+                                // SQL seleciona todos os usuários da tabela do banco de dados
+                                $sql = "SELECT * FROM usuario";
+                                $resultado = mysqli_query($conexao, $sql);
+
+                                // o while fica a todo momento adicionando cada linha de cada usuário do banco de dados até terminar(looping)
+                                // em $coluna tem as seguintes informações(id, nome, cpf, senha)
+                                while ($colunas = mysqli_fetch_assoc($resultado)){
+                              ?>
                               <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <th scope="row"> <?php echo $colunas['id'] ?> </th>
+                                <td> <?php echo $colunas['nome'] ?> </td>
+                                <td> <?php echo $colunas['cpf'] ?> </td>
+                                <td> 
+                                  <a href="#"><i class="fa-regular fa-pen-to-square mr-10"></i></a>
+                                  <a href="<?php echo './usuario/excluir.php?id='.$colunas['id'] ?>"><i class="fa-regular fa-trash-can" style="color: #f21818;"></i></a>
+                               </td>
                               </tr>
-                              <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">3</th>
-                                <td>Larry the Bird</td>
-                                <td>laby</td>
-                                <td>@twitter</td>
-                              </tr>
+
+                              <?php } ?>
+
                             </tbody>
                           </table>
                     </div>
