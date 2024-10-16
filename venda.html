@@ -8,7 +8,7 @@
     <!-- TabelaJS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css" />
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Fontawasome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Logo do site -->
@@ -17,10 +17,10 @@
 </head>
 <body>
      <div class="container">
-        <h3>Tela Venda</h3>
-
-        <div class="row border">
+        <br>
+        <div class="row ">
             <div class="col-md-8">
+                <h3>Tela de Venda</h3>
                 <form action="" method="post">
                     <div class="row">
                         <div class="form-group col-md">
@@ -32,45 +32,93 @@
                             </select>
                         </div>
 
-                        <div class="form-group col-md">
+                        <div class="form-group col">
                             <label for="">Quantidade</label>
                             <input type="number" required class="form-control"/>
                         </div>
 
-                        <!-- 32px -->
-                        <div class=" col-md">
-                            <button type="submit" class="btn btn-primary" style="margin-top: 24px;"> <i class="fa-solid fa-plus"></i></button>
+                        <div class=" col">
+                            <button type="submit" class="btn btn-primary" style="margin-top: 32px;"> <i class="fa-solid fa-plus"></i></button>
                         </div>
 
-                        <table class="table mt-4">
-                            <thead>
-                                <th> Produto </th>
-                                <th> Quantidade </th>
-                                <th> Valor Unitário</th>
-                                <th> Valor Total </th>
-                                <th> Opções</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Mouse </td>
-                                    <td> 2 </td>
-                                    <td> 20 </td>
-                                    <td> 40 </td>
-                                    <td> Excluir </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-sm table-striped  mt-4">
+                                <thead class="table-secondary">
+                                    <th class="col-6"> Produto </th>
+                                    <th class="col-1"> Quantidade </th>
+                                    <th class="col-2 "> Valor </th>
+                                    <th class="col-2"> Total </th>
+                                    <th class="col-1"> Opções</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mouse </td>
+                                        <td> 2 </td>
+                                        <td> 20 </td>
+                                        <td> 40 </td>
+                                        <td> <a href="#"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mouse </td>
+                                        <td> 2 </td>
+                                        <td> 20 </td>
+                                        <td> 40 </td>
+                                        <td> <a href="#"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </form>
             </div>
             <div class="col-md-4">
-                
+                <h3> Resumo da Venda </h3>
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for=""> Cliente </label>
+                        <select name="" id="" class="form-control">
+                            <option> João </option>
+                            <option> Aline </option>
+                            <option> Pedro</option>
+                            <option> Alice</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> Funcionário </label>
+                        <select class="form-control" name="" id="">
+                            <option value=""> Cleusa </option>
+                            <option value=""> Julia </option>
+                            <option value=""> Pablo </option>
+                            <option value=""> Juliano </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> Quantidade Total</label>
+                        <input type="text" value="2" readonly class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> Valor Total</label>
+                        <input type="text" value="40" readonly class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for=""> Observações</label>
+                        <textarea name="" id="" class="form-control"></textarea>
+                    </div>
+
+                    <a href="#" class="btn btn-success"> Finalizar </a>
+                    <a href="#" class="btn btn-outline-danger"> Cancelar</a>
+                </form>
             </div>
         </div>
      </div>
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
