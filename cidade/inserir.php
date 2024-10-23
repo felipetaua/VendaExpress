@@ -8,11 +8,11 @@ $cep = $_REQUEST['cep'];
 
 echo "testando: $nome $estado $cep";
 
-$sql = "INSERT INTO estado(nome, estado, cep) VALUES ('$nome', '$estado', '$cep')";
+$sql = "INSERT INTO cidade(nome, estado, cep) VALUES ('$nome', '$estado', '$cep')";
 
 // Executar código SQL 
 $resultado = mysqli_query($conexao, $sql);
 
-header("Location: ../estado.php");
+header("Location: ../cidade.php");
 
 ?>
