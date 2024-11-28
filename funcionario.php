@@ -139,7 +139,7 @@
                                 <td> <?php echo $colunas['nome'] ?> </td>
                                 <td> <?php echo $colunas['cpf'] ?> </td>
                                 <td> 
-                                  <a href="principal.php?idAlt=<?= $colunas['id'] ?>"><i class="fa-regular fa-pen-to-square mr-10"></i></a>
+                                  <a href="funcionario.php?idAlt=<?= $colunas['id'] ?>"><i class="fa-regular fa-pen-to-square mr-10"></i></a>
                                   <a href="<?php echo './funcionario/excluir.php?id='.$colunas['id'] ?>"><i class="fa-regular fa-trash-can" style="color: #f21818;"></i></a>
                                </td>
                               </tr>

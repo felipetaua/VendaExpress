@@ -135,7 +135,7 @@
                                 <td> <?php echo $colunas['nome'] ?> </td>
                                 <td> <?php echo $colunas['cpf'] ?> </td>
                                 <td> 
-                                  <a href="principal.php?idAlt=<?= $colunas['id'] ?>"><i class="fa-regular fa-pen-to-square mr-10"></i></a>
+                                  <a href="cliente.php?idAlt=<?= $colunas['id'] ?>"><i class="fa-regular fa-pen-to-square mr-10"></i></a>
                                   <a href="<?php echo './cliente/excluir.php?id='.$colunas['id'] ?>"><i class="fa-regular fa-trash-can" style="color: #f21818;"></i></a>
                                </td>
                               </tr>
