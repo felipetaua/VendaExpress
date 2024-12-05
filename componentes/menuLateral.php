@@ -7,7 +7,7 @@
           <hr class="">
           <ul class="nav nav-pills flex-column mb-auto">
             <li>
-              <a href="./cidade.php" class="nav-link text-white  me-1">
+              <a href="./cidade.php" class="nav-link text-white  me-1 ">
               <i class="fa-solid fa-building"></i>
                 Cidade
               </a>
@@ -51,7 +51,6 @@
               <strong><?php echo $_SESSION['usuario'] ?></strong>
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" href="#">New project...</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li><a class="dropdown-item" href="#">Profile</a></li>
               <li><hr class="dropdown-divider"></li>
