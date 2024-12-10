@@ -40,20 +40,23 @@ include './venda/adicionarProduto.php';
         <div class="row ">
             <div class="col-md-8">
                 <h3>Tela de Venda</h3>
-                <form action="" method="post">
+                <form action="" method="POST">
                     <div class="row">
-                        <div class="form-group col-md">
+                        <div class="form-group col-md6">
                             <label for="">Produto</label>
-                            <select class="form-control" name="" id="">
-                                <option value="">Mouse</option>
-                                <option value="">Teclado</option>
-                                <option value="">Celular</option>
+                            <select class="form-control" name="produto" id="">
+                                <?php
+                                    $resultado = $conexao->query("SELECT id, nome, preco, estoque FROM produto");
+                                    WHILE($coluna = $resultado->fetch_assoc()) {
+                                        echo "<option value='{$coluna['id']}'> {$coluna['nome']} - Estoque: {$coluna['estoque']} - Preço: {$coluna['preco']} </option>";
+                                    }
+                                ?>
                             </select>
                         </div>
 
                         <div class="form-group col">
                             <label for="">Quantidade</label>
-                            <input type="number" required class="form-control"/>
+                            <input type="number" name="quantidade" required class="form-control"/>
                         </div>
 
                         <div class=" col">
