@@ -1,3 +1,22 @@
+<?php
+
+include 'conexao.php';
+include 'validacao.php';
+
+// caso já exista um id de venda 
+if (!empty($_GET['idVenda'])) {
+    $idVenda = $_GET['idVenda'];
+} else {
+    // Criar uma nova venda
+    $conexao->query("INSERT INTO venda (data_venda) VALUES (NOW())");
+    // Obter o id da nova venda
+    $idVenda = $conexao->insert_id;
+}
+
+include './venda/adicionarProduto.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
