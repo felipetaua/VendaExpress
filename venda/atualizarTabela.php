@@ -13,4 +13,6 @@ while($item = $itensVenda->fetch_assoc()){
     $totalValor += $item['quantidade'] * $item['valor']; 
 }
 
+$conexao->query("UPDATE venda SET data_venda = NOW(), valor_total = $totalValor, quantidade_total = $totalQuantidade WHERE id = $idVenda");
+
 ?>

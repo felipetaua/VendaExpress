@@ -73,20 +73,20 @@ include './venda/adicionarProduto.php';
                                     <th class="col-1"> Opções</th>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                        include './venda/atualizarTabela.php';
+                                        $itensVenda->data_seek(offset: 0);
+                                        while($item = $itensVenda->fetch_assoc()){      
+                                    ?>
                                     <tr>
-                                        <td>Mouse </td>
-                                        <td> 2 </td>
-                                        <td> 20 </td>
-                                        <td> 40 </td>
+                                        <td> <?php $item['nome'] ?> </td>
+                                        <td> <?php $item['quantidade'] ?> </td>
+                                        <td> <?php $item['valor'] ?> </td>
+                                        <td> <?php $item['quantidade'] * $item['valor'] ?> </td>
                                         <td> <a href="#"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
+
                                     </tr>
-                                    <tr>
-                                        <td>Mouse </td>
-                                        <td> 2 </td>
-                                        <td> 20 </td>
-                                        <td> 40 </td>
-                                        <td> <a href="#"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
-                                    </tr>
+                                    <?php }?>
                                 </tbody>
                             </table>
                         </div>
