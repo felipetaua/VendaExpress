@@ -79,10 +79,10 @@ include './venda/adicionarProduto.php';
                                         while($item = $itensVenda->fetch_assoc()){      
                                     ?>
                                     <tr>
-                                        <td> <?php $item['nome'] ?> </td>
-                                        <td> <?php $item['quantidade'] ?> </td>
-                                        <td> <?php $item['valor'] ?> </td>
-                                        <td> <?php $item['quantidade'] * $item['valor'] ?> </td>
+                                        <td> <?php echo $item['nome'] ?> </td>
+                                        <td> <?php echo $item['quantidade'] ?> </td>
+                                        <td> <?php echo $item['valor'] ?> </td>
+                                        <td> <?php echo $item['quantidade'] * $item['valor'] ?> </td>
                                         <td> <a href="#"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
 
                                     </tr>
