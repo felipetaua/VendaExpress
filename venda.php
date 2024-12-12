@@ -46,7 +46,7 @@ include './venda/adicionarProduto.php';
                             <label for="">Produto</label>
                             <select class="form-control" name="produto" id="">
                                 <?php
-                                    $resultado = $conexao->query("SELECT id, nome, preco, estoque FROM produto");
+                                    $resultado = $conexao->query("SELECT id, nome, preco, estoque FROM produto WHERE estoque > 0");
                                     WHILE($coluna = $resultado->fetch_assoc()) {
                                         echo "<option value='{$coluna['id']}'> {$coluna['nome']} - Estoque: {$coluna['estoque']} - Preço: {$coluna['preco']} </option>";
                                     }
@@ -83,7 +83,7 @@ include './venda/adicionarProduto.php';
                                         <td> <?php echo $item['quantidade'] ?> </td>
                                         <td> <?php echo $item['valor'] ?> </td>
                                         <td> <?php echo $item['quantidade'] * $item['valor'] ?> </td>
-                                        <td> <a href="#"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
+                                        <td> <a href="./venda/remover_produto.php?idVenda=<?=$idVenda?>&idItem=<?=$item['id']?>&qtd=<?=$item['quantidade']?>&prod=<?=$item['produto_id']?>"><i class="fa-solid fa-circle-minus" style="color: #f21818;"></i></a> </td>
 
                                     </tr>
                                     <?php }?>
@@ -118,12 +118,12 @@ include './venda/adicionarProduto.php';
 
                     <div class="form-group">
                         <label for=""> Quantidade Total</label>
-                        <input type="text" value="2" readonly class="form-control">
+                        <input type="text" value="<?php echo $totalQuantidade?>" readonly class="form-control">
                     </div>
 
                     <div class="form-group">
                         <label for=""> Valor Total</label>
-                        <input type="text" value="40" readonly class="form-control">
+                        <input type="text" value="<?php echo $totalValor?>" readonly class="form-control">
                     </div>
 
                     <div class="form-group">
