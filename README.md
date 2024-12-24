@@ -43,8 +43,7 @@ Funcionalidades principais:
 Antes de começar, certifique-se de ter as seguintes ferramentas instaladas:  
 - PHP (versão 8 ou superior).  
 - Composer.  
-- MySQL.  
-- Node.js.  
+- MySQL.   
 - Um servidor local (como XAMPP ou WAMP).  
 
 ---
