@@ -2,7 +2,19 @@
 ---
 
 # 🛒 VendasExpress  
-Construção de sistema de venda em PHP da turma Técnico de Informática para Internet 2024  
+**Construção de um Sistema de Vendas Completo em PHP**  
+
+Este é o **primeiro grande projeto fullstack** da turma **Técnico de Informática para Internet 2024**, desenvolvido como **projeto integrador**.  
+
+Aplicamos **todos os conhecimentos adquiridos** durante o curso para criar uma solução completa, abrangendo:  
+- Planejamento e modelagem do banco de dados.  
+- Desenvolvimento de funcionalidades no **back-end** com PHP.  
+- Criação de uma interface dinâmica e responsiva no **front-end**.  
+
+Este projeto é mais do que apenas código: é o resultado de **dedicação, aprendizado e trabalho em equipe**. Um marco na nossa jornada como futuros desenvolvedores, demonstrando o que podemos alcançar com esforço e criatividade.  
+
+**Transformando teoria em prática para criar algo incrível!**
+
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
