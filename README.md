@@ -133,7 +133,7 @@ Este projeto está licenciado sob a **MIT License**. Consulte o arquivo `LICENSE
 ## 👩‍💻 Equipe de Desenvolvimento  
 
 - **Tauã Felipe**  
-  [GitHub Profile](https://github.com/taua-felipe)  
+  [GitHub Profile](https://github.com/felipetaua)  
   **Email:** taua.felipee@gmail.com  
 
 --- 
