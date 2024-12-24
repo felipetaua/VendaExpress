@@ -32,7 +32,7 @@ Funcionalidades principais:
 
 ## 📊 Diagramas  
 
-### **Diagrama de Banco de Dados**  
+### **Diagramas de Banco de Dados**  
 <div>
   <img width="800px" src="https://github.com/user-attachments/assets/6b7eb036-9d18-483b-9774-a5c1b03f5357"></img>
 </div>  
